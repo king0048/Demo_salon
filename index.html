@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOUR SALON NAME - Premium Beauty</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@300;400;600&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+  body{font-family:'Montserrat',sans-serif;background:#0A0A0A;color:#fff}
+  
+  nav{position:fixed;top:0;width:100%;padding:20px 50px;background:rgba(10,10,10,0.9);backdrop-filter:blur(20px);z-index:100;display:flex;justify-content:space-between}
+  nav a{color:#D4AF37;text-decoration:none;margin:0 15px;font-weight:500;transition:0.3s}
+  nav a:hover{color:#E91E63}
+  
+  .hero{height:100vh;background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920') center/cover fixed;display:flex;align-items:center;justify-content:space-between;position:relative;padding:0 8%}
+  .hero::after{content:'';position:absolute;width:100%;height:100%;background:linear-gradient(90deg,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.4) 100%)}
+  .hero-content{position:relative;z-index:2;width:50%}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-size:4.5rem;background:linear-gradient(90deg,#D4AF37,#FFF,#D4AF37);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:shine 4s linear infinite}
+  @keyframes shine{0%{background-position:0%}100%{background-position:200%}}
+  
+  .avatar-3d{position:relative;z-index:2;width:400px;height:400px;animation:float3d 4s ease-in-out infinite;transform-style:preserve-3d}
+  @keyframes float3d{0%,100%{transform:translateY(0) rotateY(0deg)}50%{transform:translateY(-20px) rotateY(15deg)}}
+  .avatar-3d img{width:100%;height:100%;border-radius:30px;border:4px solid #D4AF37;box-shadow:0 0 60px rgba(212,175,55,0.6);object-fit:cover}
+  
+  .btn-gold{background:linear-gradient(135deg,#D4AF37,#FFD700);color:#000;padding:16px 45px;border:none;border-radius:50px;font-weight:700;font-size:1.1rem;cursor:pointer;text-decoration:none;display:inline-block;margin-top:20px;transition:0.4s}
+  .btn-gold:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(212,175,55,0.7)}
+  
+  section{padding:100px 8%;max-width:1400px;margin:auto;min-height:100vh}
+  h2{font-family:'Cormorant Garamond',serif;font-size:3rem;text-align:center;margin-bottom:60px;color:#D4AF37}
+  
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .about img{width:100%;height:500px;object-fit:cover;border-radius:20px;box-shadow:0 20px 50px rgba(212,175,55,0.3)}
+  
+  .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px}
+  .service-card{background:#111;border:1px solid #D4AF37;border-radius:20px;overflow:hidden;transition:0.5s}
+  .service-card:hover{transform:translateY(-10px) rotateX(5deg);box-shadow:0 20px 50px rgba(212,175,55,0.4)}
+  .service-img{width:100%;height:280px;overflow:hidden}
+  .service-img img{width:100%;height:100%;object-fit:cover;transition:0.5s}
+  .service-card:hover .service-img img{transform:scale(1.1)}
+  .service-info{padding:25px}
+  .price{font-size:2rem;color:#E91E63;font-weight:700;margin:10px 0}
+  
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .gallery-item{position:relative;overflow:hidden;border-radius:15px;height:350px}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:0.6s;filter:brightness(0.8)}
+  .gallery-item:hover img{transform:scale(1.15);filter:brightness(1.1)}
+  
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+  .info-box{background:#111;padding:40px;border-radius:20px;border:1px solid #D4AF37}
+  
+  .whatsapp{position:fixed;bottom:30px;right:30px;background:#25D366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;text-decoration:none;animation:pulse 2s infinite;z-index:999}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+  
+  /* CREDIT FOOTER */
+  footer{background:#000;text-align:center;padding:40px;border-top:2px solid #D4AF37}
+  .credit{background:linear-gradient(135deg,#D4AF37,#FFD700);color:#000;padding:15px;margin-top:20px;border-radius:10px;font-weight:700}
+  .credit a{color:#000;text-decoration:none}
+  
+  @media(max-width:1000px){
+    .hero{flex-direction:column;text-align:center;padding-top:120px}
+    .hero-content{width:100%}
+    .avatar-3d{width:280px;height:280px;margin-top:30px}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .about,.contact-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div style="font-weight:700;color:#D4AF37;font-size:1.3rem">YOUR SALON NAME</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>YOUR SALON NAME</h1>
+    <p style="font-size:1.3rem;margin:25px 0;opacity:0.9">Redefining Beauty. Creating Confidence.</p>
+    <a href="#services" class="btn-gold">Explore Services</a>
+  </div>
+  <div class="avatar-3d">
+    <img src="creator.jpg" alt="Professional Stylist">
+  </div>
+</section>
+
+<section>
+  <div class="about">
+    <div>
+      <h2>About Us</h2>
+      <p style="font-size:1.1rem;line-height:1.8;opacity:0.9">10+ saal se hum beauty industry me best dene ki koshish kar rahe hain. International trained stylists, premium products aur luxury experience - yehi hai YOUR SALON NAME ki pehchaan.</p>
+      <a href="#contact" class="btn-gold" style="margin-top:30px">Book Now</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?w=1000" alt="Salon Interior">
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Premium Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <div class="service-img"><img src="https://images.unsplash.com/photo-1605499089882-a385adcada14?w=800" alt="Hair"></div>
+      <div class="service-info">
+        <h3>Hair Styling & Cut</h3>
+        <p>International trends, Layer cut, Bob, Pixie by experts</p>
+        <p class="price">₹1299+</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800" alt="Facial"></div>
+      <div class="service-info">
+        <h3>Skin & Facial</h3>
+        <p>Diamond, Gold, Hydra Facial, Korean Glass Skin</p>
+        <p class="price">₹1999+</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img"><img src="https://images.unsplash.com/photo-1596464716127-f5a447a4a72e?w=800" alt="Bridal"></div>
+      <div class="service-info">
+        <h3>Bridal Makeup</h3>
+        <p>HD, Airbrush, Celebrity look with draping</p>
+        <p class="price">₹14999+</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img"><img src="https://images.unsplash.com/photo-1600334089717-78ab6a9fde12?w=800" alt="Nails"></div>
+      <div class="service-info">
+        <h3>Nail Art & Spa</h3>
+        <p>Gel, Acrylic, French Nails + Full Body Spa</p>
+        <p class="price">₹899+</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Our Masterpieces</h2>
+  <div class="gallery">
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560869713-7a7ed58bdaa9?w=800"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b2?w=800"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516975080664-ed2c1453e018?w=800"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1605499089882-a385adcada14?w=800"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?w=800"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560869713-7a7ed58bdaa9?w=800"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-grid">
+    <div class="info-box">
+      <h3 style="color:#D4AF37;margin-bottom:20px">Visit Us</h3>
+      <p>📍 Kasimabad, Uttar Pradesh</p>
+      <p>📞 +91 XXXXX XXXXX</p>
+      <p>⏰ 10 AM - 8 PM, All Days</p>
+      <a href="https://wa.me/91XXXXXXXXXX" class="btn-gold">WhatsApp Booking</a>
+    </div>
+    <div class="info-box">
+      <h3 style="color:#D4AF37;margin-bottom:20px">Special Offer</h3>
+      <p style="font-size:1.2rem">First Visit pe 25% OFF</p>
+      <p>Combo: Haircut + Facial sirf ₹1999</p>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
+
+<footer>
+  <p>© 2026 YOUR SALON NAME | Kasimabad, UP | Luxury Redefined</p>
+  <div class="credit">
+    Website Designed & Developed by: <b>BAIBHAV TIWARI</b><br>
+    📞 <a href="https://wa.me/8756351545">8756351545</a>
+  </div>
+</footer>
+
+</body>
+  </html>
